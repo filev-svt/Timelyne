@@ -23,7 +23,11 @@ We prioritize **pragmatism over dogmatism**. The goal is to write code that is e
 -   **`@features`**: Contains **domain-specific** components that implement business logic (e.g., `AddToCartButton`, `ProductHero`).
     -   Keep related code (components, hooks, types, utils) collocated within the feature folder.
     -   If a feature grows too large, break it down into sub-features or move shared parts to `@components` or `@utils` only if truly necessary.
--   **One exported component or hook per file, use barrels for grouping**
+-   **One exported component or hook per file**
+
+### 2. Component structure
+-   Components are defined as arrow functions.
+-   Page Components are default exports of the defined arrow functions.
 
 ### 2. Imports and Barrel Files
 
