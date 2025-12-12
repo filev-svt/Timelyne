@@ -1,11 +1,12 @@
 # Timelyne
-Timelyne is a lightweight, yet capable task management application.
+Timelyne is a lightweight and capable task management application. A pragmatic tool for the ones that are doing the work. 
 
 
 # The main entities
 
 ## User
-User has many projects.
+User can own many projects.
+User can watch many projects via an invite.
 
 ## Project
 Project has many tasks.
