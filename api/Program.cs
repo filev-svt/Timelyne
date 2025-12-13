@@ -7,11 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApiDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddDbContext<IdentityDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
-
 builder.Services.AddIdentityApiEndpoints<IdentityUser>()
-    .AddEntityFrameworkStores<IdentityDbContext>();
+    .AddEntityFrameworkStores<ApiDbContext>();
 
 builder.Services.AddAuthentication().AddGoogle(googleOptions =>
 {
