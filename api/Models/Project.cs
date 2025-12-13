@@ -13,15 +13,15 @@ public class Project
     public string? Description { get; set; }
     public required string OwnerId { get; set; }
 
-    // Navigation properties
-    public required User Owner { get; set; }
+    // Navigation properties (managed by EF Core, not required on creation)
+    public User Owner { get; set; }
 
     [InverseProperty("ProjectsAdmin")]
-    public required List<User> Admins { get; set; }
+    public List<User> Admins { get; set; } = [];
 
     [InverseProperty("ProjectsMember")]
-    public required List<User> Members { get; set; }
+    public List<User> Members { get; set; } = [];
 
     [InverseProperty("ProjectsWatcher")]
-    public required List<User> Watchers { get; set; }
+    public List<User> Watchers { get; set; } = [];
 }
